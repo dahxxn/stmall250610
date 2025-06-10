@@ -45,15 +45,21 @@ public class Delivery {
     public static void startDelivery(OrderPlaced orderPlaced) {
         //implement business logic here:
 
-        /** Example 1:  new item 
+        // Example 1:  new item 
         Delivery delivery = new Delivery();
+        delivery.setOrderId(orderPlaced.getId()); 
+        delivery.setItemId(orderPlaced.getProductId()); 
+        delivery.setCustomId(orderPlaced.getCustomerId());
+        delivery.setAddress(orderPlaced.getAddress());
+        delivery.setQty(orderPlaced.getQty());
+        delivery.setStatus("DELIVERY COMPLETED"); 
         repository().save(delivery);
 
         DeliveryCompleted deliveryCompleted = new DeliveryCompleted(delivery);
         deliveryCompleted.publishAfterCommit();
-        */
+        
 
-        /** Example 2:  finding and process
+        /* Example 2:  finding and process
         
 
         repository().findById(orderPlaced.get???()).ifPresent(delivery->{
@@ -64,8 +70,8 @@ public class Delivery {
             DeliveryCompleted deliveryCompleted = new DeliveryCompleted(delivery);
             deliveryCompleted.publishAfterCommit();
 
-         });
-        */
+         });*/ 
+        
 
     }
 

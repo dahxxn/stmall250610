@@ -32,6 +32,11 @@ public class Order {
 
     private String status;
 
+    @PrePersist
+    public void onPrePersist(){
+        setStatus("ORDER PLACED"); // 영속하기 전에만 실행됨 
+    }
+
     @PostPersist
     public void onPostPersist() {
         OrderPlaced orderPlaced = new OrderPlaced(this);
