@@ -6,8 +6,8 @@
             :editMode="editMode"
         />
         <Number
-            label="ProductId"
-            v-model="value.productId"
+            label="ItemId"
+            v-model="value.itemId"
             :editMode="editMode"
         />
         <Number

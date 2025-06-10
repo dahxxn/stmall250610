@@ -26,7 +26,7 @@
                         <tr>
                         <th>Id</th>
                         <th>CustomerId</th>
-                        <th>ProductId</th>
+                        <th>ItemId</th>
                         <th>Qty</th>
                         <th>Address</th>
                         <th>Status</th>
@@ -40,7 +40,7 @@
                         >
                             <td class="font-semibold">{{ idx + 1 }}</td>
                             <td class="whitespace-nowrap" label="CustomerId">{{ val.customerId }}</td>
-                            <td class="whitespace-nowrap" label="ProductId">{{ val.productId }}</td>
+                            <td class="whitespace-nowrap" label="ItemId">{{ val.itemId }}</td>
                             <td class="whitespace-nowrap" label="Qty">{{ val.qty }}</td>
                             <td class="whitespace-nowrap" label="Address">{{ val.address }}</td>
                             <td class="whitespace-nowrap" label="Status">{{ val.status }}</td>
@@ -106,7 +106,7 @@
                     <v-card-text>
                         <div>
                             <Number label="CustomerId" v-model="selectedRow.customerId" :editMode="true"/>
-                            <Number label="ProductId" v-model="selectedRow.productId" :editMode="true"/>
+                            <Number label="ItemId" v-model="selectedRow.itemId" :editMode="true"/>
                             <Number label="Qty" v-model="selectedRow.qty" :editMode="true"/>
                             <String label="Address" v-model="selectedRow.address" :editMode="true"/>
                             <String label="Status" v-model="selectedRow.status" :editMode="true"/>

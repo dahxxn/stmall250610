@@ -24,7 +24,7 @@ public class Order {
 
     private Long customerId;
 
-    private Long productId;
+    private Long itemId;
 
     private Integer qty;
 
